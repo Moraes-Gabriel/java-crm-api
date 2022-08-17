@@ -31,7 +31,7 @@ public class CustomerController extends CommonController {
         public ResponseEntity<?> findById(@PathVariable Long id) throws TechnicalException {
         return this.buildResponse(service.findById(id), HttpStatus.OK);
     }
-    @GetMapping("/publico")
+    @GetMapping()
     public ResponseEntity<?> getAllCustomer() throws TechnicalException {
         return this.buildResponse(service.getAll(), HttpStatus.OK);
     }
